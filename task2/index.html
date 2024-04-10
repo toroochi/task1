@@ -5,28 +5,36 @@
     </head>
 <body>
     <div class="container">
-      <table class="border" border="1">
+    <table class="border" border="1">
         <script>
-          document.write('<tr>');
-  
-          document.write('<th></th>');
-  
-          for(var i=1; i <= 12; i++){
-            document.write('<th>'+ i +'</th>');
-          }
-          document.write('</tr>');
-  
-          document.write('<tr>');
-  
-          for(var j=1; j <= 12; j++){
-            document.write('<th>' + j + '</th>');
-            for(var k=1; k <=12; k++){
-              document.write('<td>'+ j*k +'</td>');
+            count = 0
+            function Click(obj){
+                count += 1;
+                obj.style.backgroundColor='#cccccc';
+                if(count == 2){
+                    obj.style.backgroundColor='#fffffb';
+                    count = 0;
+                }
+            }
+            document.write('<tr>');
+    
+            document.write('<th></th>');
+    
+            for(var i=1; i <= 12; i++){
+                document.write('<th>'+ i +'</th>');
             }
             document.write('</tr>');
-          }
+    
+            document.write('<tr>');
+    
+            for(var j=1; j <= 12; j++){
+                document.write('<th>' + j + '</th>');
+                for(var k=1; k <=12; k++){
+                document.write('<td onclick=Click(this)>'+ j*k +'</td>');
+                }
+                document.write('</tr>');
+            }
         </script>
-      </table>
+    </table>
     </div>
 </body>
-  
