@@ -1,0 +1,32 @@
+<head>
+    <meta charset=”utf-8″>
+    <title>12*12</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+<body>
+    <div class="container">
+      <table class="border" border="1">
+        <script>
+          document.write('<tr>');
+  
+          document.write('<th></th>');
+  
+          for(var i=1; i <= 12; i++){
+            document.write('<th>'+ i +'</th>');
+          }
+          document.write('</tr>');
+  
+          document.write('<tr>');
+  
+          for(var j=1; j <= 12; j++){
+            document.write('<th>' + j + '</th>');
+            for(var k=1; k <=12; k++){
+              document.write('<td>'+ j*k +'</td>');
+            }
+            document.write('</tr>');
+          }
+        </script>
+      </table>
+    </div>
+</body>
+  
